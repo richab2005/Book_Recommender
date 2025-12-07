@@ -23,6 +23,7 @@ def index():
 def recommend():
     return render_template('recommend.html')
 
+
 @app.route('/search_books', methods=['POST'])
 def search_books():
     user_input = request.form.get('user_input')
@@ -68,5 +69,5 @@ def recommend_books():
 
     return render_template('recommend.html',data=data)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
